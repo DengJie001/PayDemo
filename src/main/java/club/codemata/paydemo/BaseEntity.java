@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
-@Data
+@Data 
 public class BaseEntity {
     @TableId(value = "id", type = IdType.ASSIGN_UUID)
     private String id;
