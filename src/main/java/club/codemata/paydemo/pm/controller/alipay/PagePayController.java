@@ -41,6 +41,8 @@ public class PagePayController {
     @Autowired
     private IPayResultService payResultService;
 
+    // http://localhost:8080/alipay/page/pay
+    // ckvttb8113@sandbox.com
     @RequestMapping("/pay")
     @ResponseBody
     public Object pay(@RequestParam("amount") String amount) throws AlipayApiException {
@@ -97,6 +99,10 @@ public class PagePayController {
             payOrder.setPayWayId("4e9374f4939bb5dbd16496460b8b0865");
             payOrder.setSystemId("ae63928c81475f56fd72abdb3ade7dc9");
             boolean saveOrUpdateRes = payOrderService.saveOrUpdate(payOrder);
+            System.out.println("outTradeNo=" + response.getOutTradeNo());
+            System.out.println("sellerId=" + response.getSellerId());
+            System.out.println("totalAmount=" + response.getTotalAmount());
+            System.out.println("tradeNo=" + response.getTradeNo());
         } else {
             return ResData.create("请求失败");
         }
@@ -225,5 +231,7 @@ public class PagePayController {
         System.out.println(s);
         JSONObject res = JSONObject.parseObject(s);
         return ResData.create(res);
+        System.out.println(response.getBody());
+        return response.getBody();
     }
 }

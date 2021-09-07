@@ -29,11 +29,11 @@ public class AlipayConfig {
     public static String SIGN_TYPE = "RSA2";
 
     // 应用公钥证书路径
-    public static String APP_CERT_PATH = "E:\\PayDemo\\src\\main\\resources\\key\\appCertPublicKey_2021000118601463.crt";
+    public static String APP_CERT_PATH = "src/main/resources/key/appCertPublicKey_2021000118601463.crt";
 
     // 支付宝公钥证书路径
-    public static String ALIPAY_PUBLIC_CERT_PATH = "E:\\PayDemo\\src\\main\\resources\\key\\alipayCertPublicKey_RSA2.crt";
+    public static String ALIPAY_PUBLIC_CERT_PATH = "src/main/resources/key/alipayCertPublicKey_RSA2.crt";
 
     // 根证书路径
-    public static String ROOT_CERT_PATH = "E:\\PayDemo\\src\\main\\resources\\key\\alipayRootCert.crt";
+    public static String ROOT_CERT_PATH = "src/main/resources/key/alipayRootCert.crt";
 }
